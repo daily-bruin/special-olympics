@@ -1,7 +1,13 @@
 $nav-link-height: 50px;
 
+body {
+  background-image: url('../img/weaves.jpg');
+}
+
 nav {
-  background-color: rgba(0,0,0,0.5);
+  //background-image: url('../img/weaves.jpg');
+  background-color: rgba(255,255,255,0.7);
+  min-width: 500px;
   width: 100%;
   text-align: right;
   position: fixed;
@@ -13,7 +19,7 @@ nav {
     color: black;
   }
   .nav-topic {
-    margin-right: 15%;
+    margin-right: 10%;
   }
 
   .nav-top {
@@ -38,7 +44,38 @@ aside {
 
 // CSS FOR CONTENT PULLED FROM SPREADSHEET
 .post {
-  background-color: lightgrey;
-  padding: 25px;
+  background-color: rgba(255,255,255,0.8);
+  //background-color: lightgrey;
+  padding: 5px 20px 5px 20px;
   margin-bottom: 20px;
 }
+
+#content {
+  .post {
+    border-top: 5px solid;
+  }
+  .gymnastics {
+    border-color: maroon;
+  }
+  .judo {
+    border-color: purple;
+  }
+  .soccer {
+    border-color: green;
+  }
+  .softball {
+    border-color: lightblue;
+  }
+  .tennis {
+    border-color: navy;
+  }
+  .volleyball {
+    border-color: orange;
+  }
+}
+
+
+
+
+
+

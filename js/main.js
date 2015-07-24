@@ -23,25 +23,47 @@ $(document).ready(function() {
 	    $('#venueNames').slideUp();
 	  }
 	);
-
 	// GOOGLE SPREADSHEET JS
 	//source file is https://docs.google.com/a/media.ucla.edu/spreadsheets/d/1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I/edit?usp=sharing
 	var spreadsheetID = "1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I";
 	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 	var oldDanceMarathonURL= "https://spreadsheets.google.com/feeds/list/1gJQIn0TvEJ0c-R7Csntfwmu3qwTzqAYJEImdZ720jeQ/od6/public/values?alt=json";
 	
+	var sports = ["gymnastics", "judo", "soccer", "softball", "tennis", "volleyball"];
+
+	// set up nav bar links to reference bottom posts and
+	// make classes for all sport categories in #content
+	for (var i = 0; i < sports.length; i++) {
+		$('#content').append('<div id="' + sports[i] + 'group"></div>');
+	};
+
+	// get spreadsheet JSON
 	$.getJSON(url, function(data) {
 
-	  var entry = data.feed.entry;	// get array of entries
+	  var entry = data.feed.entry.reverse();	// get array of entries
 	  $(entry).each(function(){
 
 	  	// give each post proper class name depending on sport category
 	  	var sportCategory = this.gsx$sportcategory.$t;
-	  	var newPost = '<div class="' + sportCategory + ' post"><h2>' + this.gsx$title.$t + '</h2><p>' 
+	  	var newPost = '<div class="' + sportCategory + ' post"><h3>' + this.gsx$title.$t + '</h3><p>' 
 	  					+ this.gsx$content.$t + '</p></div>';
-	    $('#content').append(newPost);
+	    $('#' + sportCategory + 'group').append(newPost);
 	  });
 
+	});
+
+	// scrolling speed
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top - originalContentHeight - 90
+	    }, 1000, 'swing', function () {
+	        window.location.hash = target;
+	    });
 	});
 });
 	
