@@ -1,38 +1,53 @@
 /* line 3, ../scss/main.scss */
 nav {
   background-color: lightgrey;
-  padding: 10px;
   width: 100%;
   text-align: right;
   position: fixed;
   z-index: 100;
 }
-/* line 10, ../scss/main.scss */
+/* line 9, ../scss/main.scss */
 nav .title {
   float: left;
 }
-/* line 13, ../scss/main.scss */
+/* line 12, ../scss/main.scss */
 nav a {
   color: black;
 }
-/* line 16, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 nav .nav-topic {
   margin-right: 15%;
 }
-
-/* line 21, ../scss/main.scss */
-aside {
-  padding: 15px 0 15px 0;
+/* line 19, ../scss/main.scss */
+nav .nav-top {
+  margin: 5px 0 10px 0;
+  padding: 10px;
+}
+/* line 24, ../scss/main.scss */
+nav .sport-venue-details {
+  background-color: lightblue;
+}
+/* line 28, ../scss/main.scss */
+nav aside {
+  line-height: 40px;
   z-index: 10;
   color: black;
   width: 100%;
   text-align: center;
 }
-/* line 27, ../scss/main.scss */
-aside li {
+/* line 35, ../scss/main.scss */
+nav aside li {
   list-style-type: none;
 }
-/* line 30, ../scss/main.scss */
-aside a {
+/* line 38, ../scss/main.scss */
+nav aside a {
   color: black;
+}
+/* line 43, ../scss/main.scss */
+nav #sportNames {
+  height: 40px;
+}
+/* line 46, ../scss/main.scss */
+nav #venueNames {
+  height: 120px;
 }
