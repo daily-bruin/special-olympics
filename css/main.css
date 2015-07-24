@@ -1,6 +1,6 @@
 /* line 3, ../scss/main.scss */
 nav {
-  background-color: lightgrey;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   text-align: right;
   position: fixed;
@@ -23,31 +23,27 @@ nav .nav-top {
   margin: 5px 0 10px 0;
   padding: 10px;
 }
-/* line 24, ../scss/main.scss */
-nav .sport-venue-details {
-  background-color: lightblue;
-}
-/* line 28, ../scss/main.scss */
-nav aside {
-  line-height: 40px;
+
+/* line 25, ../scss/main.scss */
+aside {
+  line-height: 50px;
   z-index: 10;
   color: black;
   width: 100%;
   text-align: center;
 }
-/* line 35, ../scss/main.scss */
-nav aside li {
+/* line 31, ../scss/main.scss */
+aside li {
   list-style-type: none;
 }
-/* line 38, ../scss/main.scss */
-nav aside a {
+/* line 34, ../scss/main.scss */
+aside a {
   color: black;
 }
-/* line 43, ../scss/main.scss */
-nav #sportNames {
-  height: 40px;
-}
-/* line 46, ../scss/main.scss */
-nav #venueNames {
-  height: 120px;
+
+/* line 40, ../scss/main.scss */
+.post {
+  background-color: lightgrey;
+  padding: 25px;
+  margin-bottom: 20px;
 }

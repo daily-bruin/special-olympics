@@ -1,7 +1,7 @@
-$nav-link-height: 40px;
+$nav-link-height: 50px;
 
 nav {
-  background-color: lightgrey;
+  background-color: rgba(0,0,0,0.5);
   width: 100%;
   text-align: right;
   position: fixed;
@@ -20,33 +20,25 @@ nav {
     margin: 5px 0 10px 0;
     padding: 10px;
   }
-
-  .sport-venue-details {
-    background-color: lightblue;
-  }
-
-  aside {
-    //padding: 15px 0 15px 0;
-    line-height: $nav-link-height;
-    z-index: 10;
-    color: black;
-    width: 100%;
-    text-align: center;
-    li {
-      list-style-type: none;
-    }
-    a {
-      color: black;
-    }
-  }
-
-  #sportNames {
-     height: $nav-link-height;
-  }
-  #venueNames {
-     height: $nav-link-height * 3;
-  }
-
 }
 
+aside {
+  line-height: $nav-link-height;
+  z-index: 10;
+  color: black;
+  width: 100%;
+  text-align: center;
+  li {
+    list-style-type: none;
+  }
+  a {
+    color: black;
+  }
+}
 
+// CSS FOR CONTENT PULLED FROM SPREADSHEET
+.post {
+  background-color: lightgrey;
+  padding: 25px;
+  margin-bottom: 20px;
+}

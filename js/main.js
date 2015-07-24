@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$('aside').hide();
+	var originalContentHeight = $('nav').height() + 20;
+	$('#content').css('margin-top', originalContentHeight);
 	// NAV JS
 	$('aside').hide();
 	$( 'nav' ).hover(
@@ -20,17 +23,45 @@ $(document).ready(function() {
 	    $('#venueNames').slideUp();
 	  }
 	);
-	
-	// GOOGLE SPREADSHEET JS
 
-var timeArray = ['5/25/2015 23:00:00','4/19/2015 13:00:00','4/19/2015 11:00:00','4/19/2015 09:00:00','4/19/2015 07:00:00','4/19/2015 05:00:00','4/19/2015 03:00:00','4/19/2015 01:00:00','4/18/2015 23:00:00','4/18/2015 21:00:00','4/18/2015 19:00:00','4/18/2015 17:00:00','4/18/2015 15:00:00','4/18/2015 13:00:00','4/18/2015 11:00:00','4/18/2015 09:00:00'];
-// var timeName = ["11 PM","9 PM","7 PM","5 PM","3 PM","1 PM", "11 AM","9 AM","7 AM"];
-var timeName = ["26+","24 - 26","22 - 24","20 - 22", "18 - 20","16 - 18","14 - 16","12 - 14","10 - 12","8 - 10","6 - 8","4 - 6","2 - 4","0 - 2","Pre"];
-		//source file is https://docs.google.com/a/media.ucla.edu/spreadsheets/d/1rQHDYJIHHKijCQPpxjUaO1r0oZn4fLEryNmNsnfX2Gg/edit?pli=1#gid=0
-		$(function() {	
-			$.getJSON( "https://spreadsheets.google.com/feeds/list/1gJQIn0TvEJ0c-R7Csntfwmu3qwTzqAYJEImdZ720jeQ/od6/public/values?alt=json", function (data) {	
-				$.each(data.feed.entry.reverse(), function(i,entry) {	
-					var time = new Date (entry.gsx$datetime.$t);
+	// GOOGLE SPREADSHEET JS
+	//source file is https://docs.google.com/a/media.ucla.edu/spreadsheets/d/1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I/edit?usp=sharing
+	var spreadsheetID = "1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I";
+	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+	var oldDanceMarathonURL= "https://spreadsheets.google.com/feeds/list/1gJQIn0TvEJ0c-R7Csntfwmu3qwTzqAYJEImdZ720jeQ/od6/public/values?alt=json";
+	
+	$.getJSON(url, function(data) {
+
+	  var entry = data.feed.entry;	// get array of entries
+	  $(entry).each(function(){
+
+	  	// give each post proper class name depending on sport category
+	  	var sportCategory = this.gsx$sportcategory.$t;
+	  	var newPost = '<div class="' + sportCategory + ' post"><h2>' + this.gsx$title.$t + '</h2><p>' 
+	  					+ this.gsx$content.$t + '</p></div>';
+	    $('#content').append(newPost);
+	  });
+
+	});
+});
+	
+	
+			
+	/*$.getJSON(url , function (data) {	
+				$.each(data.feed.entry.reverse(), function(i,entry) {
+	           		/*var append = '<section id="anchor'+i+'"class="transition">'
+	           		+'<div id="container" style="height: 100%; overflow:hidden; ">'
+	           		+'<video muted id="video'+i+'" preload="auto" style="width: 100%; overflow:hidden;" loop="loop">' 
+	           		+ '<source src="'+entry.gsx$link.$t+'" type="video/mp4">'
+	  				+'bgvideo'
+	  				+'</video></div></section>'
+						$('div#content').append(append); 
+					   index.push(i);
+					} 	*/	
+
+
+
+					/*var time = new Date (entry.gsx$datetime.$t);
 					if(i==0)
 					{
 						//find the latest time to start out with
@@ -62,7 +93,7 @@ var timeName = ["26+","24 - 26","22 - 24","20 - 22", "18 - 20","16 - 18","14 - 1
 	       			+'src="https://www.youtube.com/embed/'+entry.gsx$link.$t
 	       			+'?enablejsapi=1&amp;autoplay=1&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1"'
 	           	+'frameborder="0" allowfullscreen></iframe></div></section>';*/
-	           		var append = '<section id="anchor'+i+'"class="transition">'
+	           		/*var append = '<section id="anchor'+i+'"class="transition">'
 	           		+'<div id="container" style="height: 100%; overflow:hidden; ">'
 	           		+'<video muted id="video'+i+'" preload="auto" style="width: 100%; overflow:hidden;" loop="loop">' 
 	           		+ '<source src="'+entry.gsx$link.$t+'" type="video/mp4">'
@@ -177,11 +208,7 @@ var timeName = ["26+","24 - 26","22 - 24","20 - 22", "18 - 20","16 - 18","14 - 1
 				  $(this).css('width', w); 
 				  $(this).css('height', h); 
 				});
-
-			});
-		});
-		
+	});
+}); */
 
 
-
-});
