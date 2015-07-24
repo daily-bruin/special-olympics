@@ -1,31 +1,26 @@
-/* line 1, ../scss/main.scss */
-body {
-  background-color: black;
-  color: white;
-}
-
-/* line 6, ../scss/main.scss */
+/* line 3, ../scss/main.scss */
 nav {
   background-color: lightgrey;
   padding: 10px;
   width: 100%;
   text-align: right;
   position: fixed;
+  z-index: 100;
 }
-/* line 12, ../scss/main.scss */
+/* line 10, ../scss/main.scss */
 nav .title {
   float: left;
 }
-/* line 15, ../scss/main.scss */
+/* line 13, ../scss/main.scss */
 nav a {
   color: black;
 }
-/* line 18, ../scss/main.scss */
+/* line 16, ../scss/main.scss */
 nav .nav-topic {
   margin-right: 15%;
 }
 
-/* line 23, ../scss/main.scss */
+/* line 21, ../scss/main.scss */
 aside {
   padding: 15px 0 15px 0;
   z-index: 10;
@@ -33,11 +28,11 @@ aside {
   width: 100%;
   text-align: center;
 }
-/* line 29, ../scss/main.scss */
+/* line 27, ../scss/main.scss */
 aside li {
   list-style-type: none;
 }
-/* line 32, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 aside a {
   color: black;
 }
