@@ -23,7 +23,6 @@
 	<script src="js/handlebars-v3.0.3.js"></script>
 	<script src="js/map.js"></script>
 	<script src="js/dataloader.js"></script>
-
 </head>
 <body id="map-body">
 	<!--NAV START-->
@@ -81,9 +80,7 @@
 			{{#each apidata}}
 			<div class="card" id="card-{{@index}}" style="border-top: 6pt solid rgb(1, 136, 210)">
 				<p class="card-title">{{title}}</p>
-				<div class="card-video">
-					<iframe class="card-video-embed" height="315" src="{{videolink}}" frameborder="0" allowfullscreen></iframe>
-				</div>
+				<div class="card-location">{{location}}</div>
 				<div class="card-description">{{description}}</div>
 			</div>
 			{{/each}}

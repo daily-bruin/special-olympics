@@ -180,13 +180,20 @@ aside {
       border-top: 6pt solid rgb(1, 136, 210);
     }
 
-    .card-title {
-      font-family: Roboto;
-      font-size: 20pt;
-      font-weight: bold;
-      margin: 5px;
-      margin-bottom: 15px;
-    }
+.card-title {
+  font-family: Roboto;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.card-location {  
+  font-family: Roboto;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 5px;
+}
 
     .card-video {
         position: relative;

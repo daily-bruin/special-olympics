@@ -203,6 +203,13 @@ aside li {
   margin-bottom: 15px;
 }
 /* line 191, ../scss/main.scss */
+#map-body .card-location {
+  font-family: Roboto;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 5px;
+}
+/* line 198, ../scss/main.scss */
 #map-body .card-video {
   position: relative;
   margin-left: -15px;
@@ -211,7 +218,7 @@ aside li {
   height: 0;
   padding-bottom: 60%;
 }
-/* line 199, ../scss/main.scss */
+/* line 206, ../scss/main.scss */
 #map-body .card-video-embed {
   position: absolute;
   top: 0;
@@ -219,7 +226,7 @@ aside li {
   width: 100%;
   height: 100%;
 }
-/* line 207, ../scss/main.scss */
+/* line 214, ../scss/main.scss */
 #map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -228,14 +235,14 @@ aside li {
   margin-top: 15px;
   text-align: justify;
 }
-/* line 216, ../scss/main.scss */
+/* line 223, ../scss/main.scss */
 #map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-/* line 223, ../scss/main.scss */
+/* line 230, ../scss/main.scss */
 #map-body #conclusion {
   font-family: Roboto;
   text-align: center;
@@ -244,35 +251,35 @@ aside li {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 232, ../scss/main.scss */
+  /* line 239, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 237, ../scss/main.scss */
+  /* line 244, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 241, ../scss/main.scss */
+  /* line 248, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 244, ../scss/main.scss */
+  /* line 251, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 247, ../scss/main.scss */
+  /* line 254, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 250, ../scss/main.scss */
+  /* line 257, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -284,7 +291,7 @@ aside li {
     background: white;
   }
 
-  /* line 261, ../scss/main.scss */
+  /* line 268, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -293,7 +300,7 @@ aside li {
     height: 80px;
   }
 
-  /* line 269, ../scss/main.scss */
+  /* line 276, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -303,7 +310,7 @@ aside li {
     top: -12px;
   }
 }
-/* line 279, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
