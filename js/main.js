@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 	  	// give each post proper class name depending on sport category
 	  	var sportCategory = this.gsx$sportcategory.$t;
-	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h3>' + this.gsx$title.$t + '</h3><p>' 
+	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h2>' + this.gsx$title.$t + '</h2><p>' 
 	  					+ this.gsx$content.$t + '</p></div>';
 	    $('#' + sportCategory + 'group').append(newPost);
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
 			{
 				byline="<h8 class="+'"byline"'+">"+this.gsx$author.$t+"</h8>";
 				positionName='#t'+ num + '.'+ sportCategory+ '.post';
-	    		$(positionName+' h3').after(byline);
+	    		$(positionName+' h2').after(byline);
 	    		console.log(this.gsx$author.$t);
 			}
 	    	if(this.gsx$link1 != null)

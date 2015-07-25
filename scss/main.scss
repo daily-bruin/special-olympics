@@ -1,7 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 $nav-link-height: 50px;
 
 body {
   background-image: url('../img/weave_bw.png');
+   line-height: 1.5;
+  font-family: 'Raleway', sans-serif;
 }
 
 nav {
@@ -302,4 +305,7 @@ p.caption_content{
 .byline{
   color:#6B6B6B;
 }
+h2{
 
+  font-family: 'Raleway', sans-serif;
+}
