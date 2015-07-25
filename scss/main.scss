@@ -9,27 +9,28 @@ body {
 
 nav {
   background-color: rgba(0,0,0,0.7);
-  min-width: 500px;
   width: 100%;
-  text-align: right;
+  padding: 20px 0 15px 0;
+  text-align: center;
   position: fixed;
   z-index: 100;
   .title {
     float: left;
   }
+  .nav-top {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    a {
+      padding-bottom: 5px;
+    }
+  }
   a {
     color: white;
     &:hover {
       color: lightblue;
+      text-decoration: none;
+      cursor: pointer;
     }
-  }
-  .nav-topic {
-    margin-right: 10%;
-  }
-
-  .nav-top {
-    margin: 5px 0 10px 0;
-    padding: 10px;
   }
 }
 
@@ -41,6 +42,11 @@ aside {
   text-align: center;
   li {
     list-style-type: none;
+  }
+  a {
+    &:hover {
+      background-color: rgba(0,0,0,0.5);
+    }
   }
 }
 
@@ -82,8 +88,6 @@ aside {
   }
 }
 
-
-
 /* FOR VENUE MAP: */
 #map-body {
     #googlemaps {
@@ -103,28 +107,28 @@ aside {
     // nav css
     nav {
       background-color: rgba(0,0,0,0.7);
-      min-width: 500px;
       width: 100%;
-      text-align: right;
+      text-align: center;
       position: fixed;
       z-index: 100;
       top: 0;
       .title {
         float: left;
       }
+      .nav-top {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        a {
+          padding-bottom: 5px;
+        }
+      }
       a {
         color: white;
         &:hover {
           color: lightblue;
+          text-decoration: none;
+          cursor: pointer;
         }
-      }
-      .nav-topic {
-        margin-right: 10%;
-      }
-
-      .nav-top {
-        margin: 5px 0 10px 0;
-        padding: 10px;
       }
     }
 
@@ -135,6 +139,12 @@ aside {
       li {
         list-style-type: none;
       }
+      a {
+        &:hover {
+          background-color: rgba(0,0,0,0.5);
+        }
+      }
+     
     }
     // end nav
 
