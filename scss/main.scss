@@ -5,7 +5,6 @@ body {
 }
 
 nav {
-  //background-image: url('../img/weaves_bw.png');
   background-color: rgba(0,0,0,0.7);
   min-width: 500px;
   width: 100%;
@@ -45,7 +44,6 @@ aside {
 // CSS FOR CONTENT PULLED FROM SPREADSHEET
 .post {
   background-color: rgba(255,255,255,0.8);
-  //background-color: lightgrey;
   padding: 5px 20px 5px 20px;
   margin-bottom: 20px;
 }
@@ -53,9 +51,13 @@ aside {
 #content {
   .post {
     border-top: 5px solid;
+    img {
+      margin: 15px 0 15px 0;
+      width: 100%;
+    }
   }
   .gymnastics {
-    border-color: maroon;
+    border-color: tomato;
   }
   .judo {
     border-color: purple;
@@ -67,92 +69,116 @@ aside {
     border-color: lightblue;
   }
   .tennis {
-    border-color: navy;
+    border-color: darkseagreen;
   }
   .volleyball {
-    border-color: orange;
+    border-color: goldenrod;
+  }
+  .opening {
+    border-color: darkred;
   }
 }
 
 
 
 /* FOR VENUE MAP: */
-#googlemaps {
-  height: 100%;
-  width: 100%;
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
-}
+#map-body {
+    #googlemaps {
+      height: 100%;
+      width: 100%;
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+    }
 
-#nav {
-text-align:center;
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background: white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-}
+    // nav css
+    nav {
+      background-color: rgba(0,0,0,0.7);
+      min-width: 500px;
+      width: 100%;
+      text-align: right;
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      .title {
+        float: left;
+      }
+      a {
+        color: white;
+        &:hover {
+          color: lightblue;
+        }
+      }
+      .nav-topic {
+        margin-right: 10%;
+      }
 
-#dblogo {
-  position: fixed;
-  left: 0;
-  border: 0;
-    padding:5px;
-  height: 50px;
-}
+      .nav-top {
+        margin: 5px 0 10px 0;
+        padding: 10px;
+      }
+    }
 
-#unseenlogo {
-  padding: 5px;
-  height: 50px;
-}
+    aside {
+      line-height: $nav-link-height;
+      width: 100%;
+      text-align: center;
+      li {
+        list-style-type: none;
+      }
+    }
+    // end nav
 
-#social-buttons {
-  position: fixed;
-  right: 10px;
-  border: 0;
-  padding: 10px;
-  height: 40px;
-  top: -12px;
-}
+    #dblogo {
+      position: fixed;
+      left: 0;
+      border: 0;
+        padding:5px;
+      height: 50px;
+    }
 
-ul.share-buttons{
-  list-style: none;
-  padding: 0;
-}
+    #social-buttons {
+      position: fixed;
+      right: 10px;
+      border: 0;
+      padding: 10px;
+      height: 40px;
+      top: -12px;
+    }
 
-ul.share-buttons li{
-  display: inline;
-}
+    ul.share-buttons{
+      list-style: none;
+      padding: 0;
+    }
 
-#content {
-  margin-top: 90px;
-  padding-left: 20px;
-}
+    ul.share-buttons li{
+      display: inline;
+    }
 
-#content-credit {
-  padding-left: 20px;
-}
+    #content {
+      margin-top: 90px;
+      padding-left: 20px;
+    }
 
-.card {
-  position: relative;
-  margin-bottom: 20px;
-  min-height: 10px;
-  min-width: 450px;
-  width: 32%;
-  padding: 15px;
-  background: white;
-  pointer-events: auto;
-}
+    #content-credit {
+      padding-left: 20px;
+    }
 
-#intro-card {
-  border-top: 6pt solid rgb(1, 136, 210);
-}
+    .card {
+      position: relative;
+      margin-bottom: 20px;
+      min-height: 10px;
+      min-width: 450px;
+      width: 32%;
+      padding: 15px;
+      background: white;
+      pointer-events: auto;
+    }
+
+    #intro-card {
+      border-top: 6pt solid rgb(1, 136, 210);
+    }
 
 .card-title {
   font-family: Roboto;
@@ -162,33 +188,50 @@ ul.share-buttons li{
   margin-bottom: 15px;
 }
 
-.card-location {	
-	font-family: Roboto;
-	font-size: 14pt;
-	font-weight: bold;
-	margin: 5px;
-}
-
-.card-description {
+.card-location {  
   font-family: Roboto;
-  font-size: 12pt;
+  font-size: 14pt;
+  font-weight: bold;
   margin: 5px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  text-align: justify;
 }
 
-#intro {
-    font-family: Roboto;
-    text-align: center;
-    font-weight:none;
-    font-size: 15pt;
-}
+    .card-video {
+        position: relative;
+        margin-left: -15px;
+        padding-right: 30px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%;
+    }
+    .card-video-embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-#conclusion {
-    font-family: Roboto;
-    text-align: center;
-    font-size: 10pt;
+    .card-description {
+      font-family: Roboto;
+      font-size: 12pt;
+      margin: 5px;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-align: justify;
+    }
+
+    #intro {
+        font-family: Roboto;
+        text-align: center;
+        font-weight:none;
+        font-size: 15pt;
+    }
+
+    #conclusion {
+        font-family: Roboto;
+        text-align: center;
+        font-size: 10pt;
+    }
 }
 
 /*  Mobile style */
@@ -226,11 +269,6 @@ ul.share-buttons li{
         position: fixed;
         left: 0;
         border: 0;
-        padding: 10px;
-        height: 80px;
-    }
-
-    #unseenlogo {
         padding: 10px;
         height: 80px;
     }

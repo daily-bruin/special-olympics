@@ -12,29 +12,29 @@ nav {
   position: fixed;
   z-index: 100;
 }
-/* line 15, ../scss/main.scss */
+/* line 14, ../scss/main.scss */
 nav .title {
   float: left;
 }
-/* line 18, ../scss/main.scss */
+/* line 17, ../scss/main.scss */
 nav a {
   color: white;
 }
-/* line 20, ../scss/main.scss */
+/* line 19, ../scss/main.scss */
 nav a:hover {
   color: lightblue;
 }
-/* line 24, ../scss/main.scss */
+/* line 23, ../scss/main.scss */
 nav .nav-topic {
   margin-right: 10%;
 }
-/* line 28, ../scss/main.scss */
+/* line 27, ../scss/main.scss */
 nav .nav-top {
   margin: 5px 0 10px 0;
   padding: 10px;
 }
 
-/* line 34, ../scss/main.scss */
+/* line 33, ../scss/main.scss */
 aside {
   line-height: 50px;
   z-index: 10;
@@ -42,50 +42,59 @@ aside {
   width: 100%;
   text-align: center;
 }
-/* line 40, ../scss/main.scss */
+/* line 39, ../scss/main.scss */
 aside li {
   list-style-type: none;
 }
 
-/* line 46, ../scss/main.scss */
+/* line 45, ../scss/main.scss */
 .post {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5px 20px 5px 20px;
   margin-bottom: 20px;
 }
 
-/* line 54, ../scss/main.scss */
+/* line 52, ../scss/main.scss */
 #content .post {
   border-top: 5px solid;
 }
-/* line 57, ../scss/main.scss */
-#content .gymnastics {
-  border-color: maroon;
+/* line 54, ../scss/main.scss */
+#content .post img {
+  margin: 15px 0 15px 0;
+  width: 100%;
 }
-/* line 60, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
+#content .gymnastics {
+  border-color: tomato;
+}
+/* line 62, ../scss/main.scss */
 #content .judo {
   border-color: purple;
 }
-/* line 63, ../scss/main.scss */
+/* line 65, ../scss/main.scss */
 #content .soccer {
   border-color: green;
 }
-/* line 66, ../scss/main.scss */
+/* line 68, ../scss/main.scss */
 #content .softball {
   border-color: lightblue;
 }
-/* line 69, ../scss/main.scss */
+/* line 71, ../scss/main.scss */
 #content .tennis {
-  border-color: navy;
+  border-color: darkseagreen;
 }
-/* line 72, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 #content .volleyball {
-  border-color: orange;
+  border-color: goldenrod;
+}
+/* line 77, ../scss/main.scss */
+#content .opening {
+  border-color: darkred;
 }
 
 /* FOR VENUE MAP: */
-/* line 80, ../scss/main.scss */
-#googlemaps {
+/* line 86, ../scss/main.scss */
+#map-body #googlemaps {
   height: 100%;
   width: 100%;
   position: fixed !important;
@@ -94,38 +103,57 @@ aside li {
   z-index: 0;
   /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-
-/* line 89, ../scss/main.scss */
-#nav {
-  text-align: center;
-  position: fixed;
+/* line 96, ../scss/main.scss */
+#map-body nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-width: 500px;
   width: 100%;
-  height: 60px;
+  text-align: right;
+  position: fixed;
+  z-index: 100;
   top: 0;
-  left: 0;
-  z-index: 2;
-  background: white;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
 }
-
-/* line 102, ../scss/main.scss */
-#dblogo {
+/* line 104, ../scss/main.scss */
+#map-body nav .title {
+  float: left;
+}
+/* line 107, ../scss/main.scss */
+#map-body nav a {
+  color: white;
+}
+/* line 109, ../scss/main.scss */
+#map-body nav a:hover {
+  color: lightblue;
+}
+/* line 113, ../scss/main.scss */
+#map-body nav .nav-topic {
+  margin-right: 10%;
+}
+/* line 117, ../scss/main.scss */
+#map-body nav .nav-top {
+  margin: 5px 0 10px 0;
+  padding: 10px;
+}
+/* line 123, ../scss/main.scss */
+#map-body aside {
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+}
+/* line 127, ../scss/main.scss */
+#map-body aside li {
+  list-style-type: none;
+}
+/* line 133, ../scss/main.scss */
+#map-body #dblogo {
   position: fixed;
   left: 0;
   border: 0;
   padding: 5px;
   height: 50px;
 }
-
-/* line 110, ../scss/main.scss */
-#unseenlogo {
-  padding: 5px;
-  height: 50px;
-}
-
-/* line 115, ../scss/main.scss */
-#social-buttons {
+/* line 141, ../scss/main.scss */
+#map-body #social-buttons {
   position: fixed;
   right: 10px;
   border: 0;
@@ -133,31 +161,26 @@ aside li {
   height: 40px;
   top: -12px;
 }
-
-/* line 124, ../scss/main.scss */
-ul.share-buttons {
+/* line 150, ../scss/main.scss */
+#map-body ul.share-buttons {
   list-style: none;
   padding: 0;
 }
-
-/* line 129, ../scss/main.scss */
-ul.share-buttons li {
+/* line 155, ../scss/main.scss */
+#map-body ul.share-buttons li {
   display: inline;
 }
-
-/* line 133, ../scss/main.scss */
-#content {
+/* line 159, ../scss/main.scss */
+#map-body #content {
   margin-top: 90px;
   padding-left: 20px;
 }
-
-/* line 138, ../scss/main.scss */
-#content-credit {
+/* line 164, ../scss/main.scss */
+#map-body #content-credit {
   padding-left: 20px;
 }
-
-/* line 142, ../scss/main.scss */
-.card {
+/* line 168, ../scss/main.scss */
+#map-body .card {
   position: relative;
   margin-bottom: 20px;
   min-height: 10px;
@@ -167,31 +190,44 @@ ul.share-buttons li {
   background: white;
   pointer-events: auto;
 }
-
-/* line 153, ../scss/main.scss */
-#intro-card {
+/* line 179, ../scss/main.scss */
+#map-body #intro-card {
   border-top: 6pt solid #0188d2;
 }
-
-/* line 157, ../scss/main.scss */
-.card-title {
+/* line 183, ../scss/main.scss */
+#map-body .card-title {
   font-family: Roboto;
   font-size: 20pt;
   font-weight: bold;
   margin: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-
-/* line 165, ../scss/main.scss */
-.card-location {	
-	font-family: Roboto;
-	font-size: 14pt;
-	font-weight: bold;
-	margin: 5px;
+/* line 191, ../scss/main.scss */
+#map-body .card-location {
+  font-family: Roboto;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 5px;
 }
-
-/* line 181, ../scss/main.scss */
-.card-description {
+/* line 198, ../scss/main.scss */
+#map-body .card-video {
+  position: relative;
+  margin-left: -15px;
+  padding-right: 30px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
+}
+/* line 206, ../scss/main.scss */
+#map-body .card-video-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 214, ../scss/main.scss */
+#map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
   margin: 5px;
@@ -199,17 +235,15 @@ ul.share-buttons li {
   margin-top: 15px;
   text-align: justify;
 }
-
-/* line 190, ../scss/main.scss */
-#intro {
+/* line 223, ../scss/main.scss */
+#map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-
-/* line 197, ../scss/main.scss */
-#conclusion {
+/* line 230, ../scss/main.scss */
+#map-body #conclusion {
   font-family: Roboto;
   text-align: center;
   font-size: 10pt;
@@ -217,35 +251,35 @@ ul.share-buttons li {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 205, ../scss/main.scss */
+  /* line 239, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 210, ../scss/main.scss */
+  /* line 244, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 214, ../scss/main.scss */
+  /* line 248, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 217, ../scss/main.scss */
+  /* line 251, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 220, ../scss/main.scss */
+  /* line 254, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 223, ../scss/main.scss */
+  /* line 257, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -257,7 +291,7 @@ ul.share-buttons li {
     background: white;
   }
 
-  /* line 234, ../scss/main.scss */
+  /* line 268, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -266,13 +300,7 @@ ul.share-buttons li {
     height: 80px;
   }
 
-  /* line 242, ../scss/main.scss */
-  #unseenlogo {
-    padding: 10px;
-    height: 80px;
-  }
-
-  /* line 247, ../scss/main.scss */
+  /* line 276, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -282,7 +310,7 @@ ul.share-buttons li {
     top: -12px;
   }
 }
-/* line 257, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;

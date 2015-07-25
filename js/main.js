@@ -41,14 +41,32 @@ $(document).ready(function() {
 	$.getJSON(url, function(data) {
 
 	  var entry = data.feed.entry.reverse();	// get array of entries
+	  var num = 0;
 	  $(entry).each(function(){
 
 	  	// give each post proper class name depending on sport category
 	  	var sportCategory = this.gsx$sportcategory.$t;
-	  	var newPost = '<div class="' + sportCategory + ' post"><h3>' + this.gsx$title.$t + '</h3><p>' 
+	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h3>' + this.gsx$title.$t + '</h3><p>' 
 	  					+ this.gsx$content.$t + '</p></div>';
 	    $('#' + sportCategory + 'group').append(newPost);
+
+	    if(this.gsx$type.$t === "article")
+	    {
+	    	if(this.gsx$link1 != null)
+	    	{
+	    		var img1 = '<img src="' + this.gsx$link1.$t + '" />';
+	    		$('h3').after(img1);
+	    	}
+	    	if(this.gsx$link2 != null)
+	    	{
+	    		var stringNum = num.toString();
+	    		var img2 = '<img src="' + this.gsx$link2.$t + '" />';
+	    		$('p:nth-child(8)').after(img2);
+	    	}
+	    }
+
 	  });
+	  num++;
 
 	});
 
