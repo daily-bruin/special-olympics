@@ -327,3 +327,8 @@ p.caption_content {
   float: right;
   font-size: 12px;
 }
+
+/* line 302, ../scss/main.scss */
+.byline {
+  color: #6B6B6B;
+}

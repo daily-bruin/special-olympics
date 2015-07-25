@@ -52,6 +52,10 @@ $(document).ready(function() {
 
 	    if(this.gsx$type.$t === "article")
 	    {
+	    var img1="";
+	  	var img2="";
+	  	var positionName="";
+	  	var byline="";
 	    	/*
 	    		img_code = '<div class="thumbnail with-caption col-sm-12">' + 
 								   '<img src="' + entry.gsx$featured.$t + '" class="img-responsive" />' + 
@@ -59,22 +63,28 @@ $(document).ready(function() {
 								   '	<p class="caption_content">'+ entry.gsx$caption.$t +'</p>' + 
 							   	   '</div>' + 
 								   '</div> <br />'*/
-
+			if(this.gsx$author != null)
+			{
+				byline="<h8 class="+'"byline"'+">"+this.gsx$author.$t+"</h8>";
+				positionName='#t'+ num + '.'+ sportCategory+ '.post';
+	    		$(positionName+' h3').after(byline);
+	    		console.log(this.gsx$author.$t);
+			}
 	    	if(this.gsx$link1 != null)
 	    	{
-	    		var img1 = '<div class="thumbnail with-caption col-sm-12">' + 
+	    		img1 = '<div class="thumbnail with-caption col-sm-12">' + 
 	    		'<img src="' + this.gsx$link1.$t +'" />'+'<div class="caption">' + 
 								   '	<p class="caption_content">'+ this.gsx$caption1.$t +'</p>' + 
 							   	   '</div>' + '</div> ';
-				console.log(this.gsx$caption1.$t);
-	    		$('h3').after(img1);
+				positionName='#t'+ num + '.'+ sportCategory+ '.post';
+	    		$(positionName+' h8').after(img1);
 	    	}
 	    	if(this.gsx$link2 != null)
 	    	{
 	    		var stringNum = num.toString();
-	    		var img2 = '<div class="thumbnail with-caption col-sm-12">' + '<img src="' + this.gsx$link2.$t + '" />'+'</div> ';
-	    	
-	    		$('p:nth-child(8)').after(img2);
+	    		img2 = '<div class="thumbnail with-caption col-sm-12">' + '<img src="' + this.gsx$link2.$t + '" />'+'</div> ';
+	    		
+	    		$(positionName+' p:nth-child(8)').after(img2);
 	    	}
 	    }
 
