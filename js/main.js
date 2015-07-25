@@ -29,7 +29,7 @@ $(document).ready(function() {
 	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 	var oldDanceMarathonURL= "https://spreadsheets.google.com/feeds/list/1gJQIn0TvEJ0c-R7Csntfwmu3qwTzqAYJEImdZ720jeQ/od6/public/values?alt=json";
 	
-	var sports = ["gymnastics", "judo", "soccer", "softball", "tennis", "volleyball"];
+	var sports = ["gymnastics", "judo", "soccer", "softball", "tennis", "volleyball", "opening"];
 
 	// set up nav bar links to reference bottom posts and
 	// make classes for all sport categories in #content

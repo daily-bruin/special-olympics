@@ -1,11 +1,11 @@
 /* line 3, ../scss/main.scss */
 body {
-  background-image: url("../img/weaves.jpg");
+  background-image: url("../img/weave_bw.png");
 }
 
 /* line 7, ../scss/main.scss */
 nav {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   min-width: 500px;
   width: 100%;
   text-align: right;
@@ -18,19 +18,23 @@ nav .title {
 }
 /* line 18, ../scss/main.scss */
 nav a {
-  color: black;
+  color: white;
 }
-/* line 21, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
+nav a:hover {
+  color: lightblue;
+}
+/* line 24, ../scss/main.scss */
 nav .nav-topic {
   margin-right: 10%;
 }
-/* line 25, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 nav .nav-top {
   margin: 5px 0 10px 0;
   padding: 10px;
 }
 
-/* line 31, ../scss/main.scss */
+/* line 34, ../scss/main.scss */
 aside {
   line-height: 50px;
   z-index: 10;
@@ -38,13 +42,9 @@ aside {
   width: 100%;
   text-align: center;
 }
-/* line 37, ../scss/main.scss */
+/* line 40, ../scss/main.scss */
 aside li {
   list-style-type: none;
-}
-/* line 40, ../scss/main.scss */
-aside a {
-  color: black;
 }
 
 /* line 46, ../scss/main.scss */
@@ -83,20 +83,21 @@ aside a {
   border-color: orange;
 }
 
-
-
 /* FOR VENUE MAP: */
+/* line 80, ../scss/main.scss */
 #googlemaps {
   height: 100%;
   width: 100%;
   position: fixed !important;
   top: 0;
   left: 0;
-  z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
+  z-index: 0;
+  /* Set z-index to 0 as it will be on a layer below the contact form */
 }
 
+/* line 89, ../scss/main.scss */
 #nav {
-text-align:center;
+  text-align: center;
   position: fixed;
   width: 100%;
   height: 60px;
@@ -104,23 +105,26 @@ text-align:center;
   left: 0;
   z-index: 2;
   background: white;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
+/* line 102, ../scss/main.scss */
 #dblogo {
   position: fixed;
   left: 0;
   border: 0;
-    padding:5px;
+  padding: 5px;
   height: 50px;
 }
 
+/* line 110, ../scss/main.scss */
 #unseenlogo {
   padding: 5px;
   height: 50px;
 }
 
+/* line 115, ../scss/main.scss */
 #social-buttons {
   position: fixed;
   right: 10px;
@@ -130,24 +134,29 @@ text-align:center;
   top: -12px;
 }
 
-ul.share-buttons{
+/* line 124, ../scss/main.scss */
+ul.share-buttons {
   list-style: none;
   padding: 0;
 }
 
-ul.share-buttons li{
+/* line 129, ../scss/main.scss */
+ul.share-buttons li {
   display: inline;
 }
 
+/* line 133, ../scss/main.scss */
 #content {
   margin-top: 90px;
   padding-left: 20px;
 }
 
+/* line 138, ../scss/main.scss */
 #content-credit {
   padding-left: 20px;
 }
 
+/* line 142, ../scss/main.scss */
 .card {
   position: relative;
   margin-bottom: 20px;
@@ -159,10 +168,12 @@ ul.share-buttons li{
   pointer-events: auto;
 }
 
+/* line 153, ../scss/main.scss */
 #intro-card {
-  border-top: 6pt solid rgb(1, 136, 210);
+  border-top: 6pt solid #0188d2;
 }
 
+/* line 157, ../scss/main.scss */
 .card-title {
   font-family: Roboto;
   font-size: 20pt;
@@ -171,22 +182,26 @@ ul.share-buttons li{
   margin-bottom: 15px;
 }
 
+/* line 165, ../scss/main.scss */
 .card-video {
-    position: relative;
-    margin-left: -15px;
-    padding-right: 30px;
-    width: 100%;
-    height: 0;
-    padding-bottom: 60%;
-}
-.card-video-embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  margin-left: -15px;
+  padding-right: 30px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%;
 }
 
+/* line 173, ../scss/main.scss */
+.card-video-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 181, ../scss/main.scss */
 .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -196,74 +211,90 @@ ul.share-buttons li{
   text-align: justify;
 }
 
+/* line 190, ../scss/main.scss */
 #intro {
-    font-family: Roboto;
-    text-align: center;
-    font-weight:none;
-    font-size: 15pt;
+  font-family: Roboto;
+  text-align: center;
+  font-weight: none;
+  font-size: 15pt;
 }
 
+/* line 197, ../scss/main.scss */
 #conclusion {
-    font-family: Roboto;
-    text-align: center;
-    font-size: 10pt;
+  font-family: Roboto;
+  text-align: center;
+  font-size: 10pt;
 }
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    #googlemaps {
-        z-index: 2;
-        height: 33%;
-        border-bottom: 6pt solid rgb(1, 136, 210)
-    }
-    #content {
-        margin: 0px;
-        margin-top: 60%;
-    }
-    .card {
-        width: 95%;
-    }
-    #intro {
-        font-size: 2em;
-    }
-    .card-description {
-        font-size: 12pt;
-    }
-    #nav {
-    text-align:center;
-        position: fixed;
-        width: 100%;
-        height: 100px;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        background: white;
-    }
+  /* line 205, ../scss/main.scss */
+  #googlemaps {
+    z-index: 2;
+    height: 33%;
+    border-bottom: 6pt solid #0188d2;
+  }
 
-    #dblogo {
-        position: fixed;
-        left: 0;
-        border: 0;
-        padding: 10px;
-        height: 80px;
-    }
+  /* line 210, ../scss/main.scss */
+  #content {
+    margin: 0px;
+    margin-top: 60%;
+  }
 
-    #unseenlogo {
-        padding: 10px;
-        height: 80px;
-    }
+  /* line 214, ../scss/main.scss */
+  .card {
+    width: 95%;
+  }
 
-    #social-buttons {
-        position: fixed;
-        right: 10px;
-        border: 0;
-        padding: 10px;
-        height: 80px;
-        top: -12px;
-    }
+  /* line 217, ../scss/main.scss */
+  #intro {
+    font-size: 2em;
+  }
+
+  /* line 220, ../scss/main.scss */
+  .card-description {
+    font-size: 12pt;
+  }
+
+  /* line 223, ../scss/main.scss */
+  #nav {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: white;
+  }
+
+  /* line 234, ../scss/main.scss */
+  #dblogo {
+    position: fixed;
+    left: 0;
+    border: 0;
+    padding: 10px;
+    height: 80px;
+  }
+
+  /* line 242, ../scss/main.scss */
+  #unseenlogo {
+    padding: 10px;
+    height: 80px;
+  }
+
+  /* line 247, ../scss/main.scss */
+  #social-buttons {
+    position: fixed;
+    right: 10px;
+    border: 0;
+    padding: 10px;
+    height: 80px;
+    top: -12px;
+  }
 }
-
+/* line 257, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
-};
+}
