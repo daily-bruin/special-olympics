@@ -60,7 +60,7 @@ aside li {
 }
 /* line 54, ../scss/main.scss */
 #content .post img {
-  margin: 15px 0 15px 0;
+  margin: 0px 0 0px 0;
   width: 100%;
 }
 /* line 59, ../scss/main.scss */
@@ -319,4 +319,11 @@ aside li {
 a {
   text-decoration: none;
   color: #3381B5;
+}
+
+/* line 296, ../scss/main.scss */
+p.caption_content {
+  margin: 0;
+  float: right;
+  font-size: 12px;
 }

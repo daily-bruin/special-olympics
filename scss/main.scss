@@ -52,7 +52,7 @@ aside {
   .post {
     border-top: 5px solid;
     img {
-      margin: 15px 0 15px 0;
+      margin: 0px 0 0px 0;
       width: 100%;
     }
   }
@@ -293,4 +293,9 @@ a {
   color: #3381B5;
 };
 
+p.caption_content{
+  margin: 0;
+  float: right;
+  font-size: 12px;
+}
 
