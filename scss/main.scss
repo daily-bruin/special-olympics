@@ -92,6 +92,11 @@ aside {
       z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
     }
 
+    #landing-img {
+      z-index: 5;
+      position: relative;
+    }
+
     // nav css
     nav {
       background-color: rgba(0,0,0,0.7);

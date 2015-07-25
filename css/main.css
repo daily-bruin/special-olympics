@@ -103,7 +103,12 @@ aside li {
   z-index: 0;
   /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-/* line 96, ../scss/main.scss */
+/* line 95, ../scss/main.scss */
+#map-body #landing-img {
+  z-index: 5;
+  position: relative;
+}
+/* line 101, ../scss/main.scss */
 #map-body nav {
   background-color: rgba(0, 0, 0, 0.7);
   min-width: 500px;
@@ -113,38 +118,38 @@ aside li {
   z-index: 100;
   top: 0;
 }
-/* line 104, ../scss/main.scss */
+/* line 109, ../scss/main.scss */
 #map-body nav .title {
   float: left;
 }
-/* line 107, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 #map-body nav a {
   color: white;
 }
-/* line 109, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 #map-body nav a:hover {
   color: lightblue;
 }
-/* line 113, ../scss/main.scss */
+/* line 118, ../scss/main.scss */
 #map-body nav .nav-topic {
   margin-right: 10%;
 }
-/* line 117, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 #map-body nav .nav-top {
   margin: 5px 0 10px 0;
   padding: 10px;
 }
-/* line 123, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 #map-body aside {
   line-height: 50px;
   width: 100%;
   text-align: center;
 }
-/* line 127, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 #map-body aside li {
   list-style-type: none;
 }
-/* line 133, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 #map-body #dblogo {
   position: fixed;
   left: 0;
@@ -152,7 +157,7 @@ aside li {
   padding: 5px;
   height: 50px;
 }
-/* line 141, ../scss/main.scss */
+/* line 146, ../scss/main.scss */
 #map-body #social-buttons {
   position: fixed;
   right: 10px;
@@ -161,25 +166,25 @@ aside li {
   height: 40px;
   top: -12px;
 }
-/* line 150, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
 #map-body ul.share-buttons {
   list-style: none;
   padding: 0;
 }
-/* line 155, ../scss/main.scss */
+/* line 160, ../scss/main.scss */
 #map-body ul.share-buttons li {
   display: inline;
 }
-/* line 159, ../scss/main.scss */
+/* line 164, ../scss/main.scss */
 #map-body #content {
   margin-top: 90px;
   padding-left: 20px;
 }
-/* line 164, ../scss/main.scss */
+/* line 169, ../scss/main.scss */
 #map-body #content-credit {
   padding-left: 20px;
 }
-/* line 168, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 #map-body .card {
   position: relative;
   margin-bottom: 20px;
@@ -190,11 +195,11 @@ aside li {
   background: white;
   pointer-events: auto;
 }
-/* line 179, ../scss/main.scss */
+/* line 184, ../scss/main.scss */
 #map-body #intro-card {
   border-top: 6pt solid #0188d2;
 }
-/* line 183, ../scss/main.scss */
+/* line 188, ../scss/main.scss */
 #map-body .card-title {
   font-family: Roboto;
   font-size: 20pt;
@@ -202,14 +207,14 @@ aside li {
   margin: 5px;
   margin-bottom: 15px;
 }
-/* line 191, ../scss/main.scss */
+/* line 196, ../scss/main.scss */
 #map-body .card-location {
   font-family: Roboto;
   font-size: 14pt;
   font-weight: bold;
   margin: 5px;
 }
-/* line 198, ../scss/main.scss */
+/* line 203, ../scss/main.scss */
 #map-body .card-video {
   position: relative;
   margin-left: -15px;
@@ -218,7 +223,7 @@ aside li {
   height: 0;
   padding-bottom: 60%;
 }
-/* line 206, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 #map-body .card-video-embed {
   position: absolute;
   top: 0;
@@ -226,7 +231,7 @@ aside li {
   width: 100%;
   height: 100%;
 }
-/* line 214, ../scss/main.scss */
+/* line 219, ../scss/main.scss */
 #map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -235,14 +240,14 @@ aside li {
   margin-top: 15px;
   text-align: justify;
 }
-/* line 223, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 #map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-/* line 230, ../scss/main.scss */
+/* line 235, ../scss/main.scss */
 #map-body #conclusion {
   font-family: Roboto;
   text-align: center;
@@ -251,35 +256,35 @@ aside li {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 239, ../scss/main.scss */
+  /* line 244, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 244, ../scss/main.scss */
+  /* line 249, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 248, ../scss/main.scss */
+  /* line 253, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 251, ../scss/main.scss */
+  /* line 256, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 254, ../scss/main.scss */
+  /* line 259, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 257, ../scss/main.scss */
+  /* line 262, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -291,7 +296,7 @@ aside li {
     background: white;
   }
 
-  /* line 268, ../scss/main.scss */
+  /* line 273, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -300,7 +305,7 @@ aside li {
     height: 80px;
   }
 
-  /* line 276, ../scss/main.scss */
+  /* line 281, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -310,7 +315,7 @@ aside li {
     top: -12px;
   }
 }
-/* line 286, ../scss/main.scss */
+/* line 291, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
