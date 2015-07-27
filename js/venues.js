@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$('aside').hide();
 	var originalContentHeight = $('nav').height() + 20;
+	$('#landing-img').css('margin-top', originalContentHeight + 50);
 	$('#content').css('margin-top', originalContentHeight);
 	// NAV JS
 	$('aside').hide();
