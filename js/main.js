@@ -45,57 +45,61 @@ $(document).ready(function() {
 	// get spreadsheet JSON
 	$.getJSON(url, function(data) {
 
-	  var entry = data.feed.entry.reverse();	// get array of entries
+	  data = clean_google_sheet_json(data);
+	  var entry = data.reverse();	// get array of entries
 	  var num = 0;
+	  
+	  console.log(entry);
+
 	  $(entry).each(function(){
 
 	  	// give each post proper class name depending on sport category
-	  	var sportCategory = this.gsx$sportcategory.$t;
-	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h2>' + this.gsx$title.$t + '</h2><p>' 
-	  					+ this.gsx$content.$t + '</p></div>';
+	  	var sportCategory = this.sportcategory;
+
+	  	var postText = this.content;
+	  	postText = postText.trim();
+	  	var re_trimtext = new RegExp('[\r\n]+', 'g');
+	  	postText = postText.length>0?'<p>'+postText.replace(re_trimtext,'</p><p>')+'</p>':null;
+
+	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h2>' + this.title + '</h2>' 
+	  					+ postText + '</div>';
 
 	    $('#' + sportCategory + 'group').append(newPost);
 
-	    if(this.gsx$type.$t === "article")
+	    if(this.type === "article")
 	    {
 	    var img1="";
 	  	var img2="";
 	  	var positionName="";
 	  	var byline="";
-	    	/*
-	    		img_code = '<div class="thumbnail with-caption col-sm-12">' + 
-								   '<img src="' + entry.gsx$featured.$t + '" class="img-responsive" />' + 
-								   '<div class="caption">' + 
-								   '	<p class="caption_content">'+ entry.gsx$caption.$t +'</p>' + 
-							   	   '</div>' + 
-								   '</div> <br />'*/
-			if(this.gsx$author)
+	    	
+			if(this.author)
 			{
-				byline="<h8 class="+'"byline"'+">"+this.gsx$author.$t+"</h8>";
+				byline="<h8 class="+'"byline"'+">"+this.author+"</h8>";
 				positionName='#t'+ num + '.'+ sportCategory+ '.post';
 	    		$(positionName+' h2').after(byline);
-	    		console.log(this.gsx$author.$t);
+	    		console.log(this.author);
 			}
-	    	if(this.gsx$link1 != null)
+	    	if(this.link1 != null)
 	    	{
 	    		img1 = '<div class="thumbnail with-caption col-sm-12">' + 
-	    		'<img src="' + this.gsx$link1.$t +'" />'+'<div class="caption">' + 
-								   '	<p class="caption_content">'+ this.gsx$caption1.$t +'</p>' + 
+	    		'<img src="' + this.link1 +'" />'+'<div class="caption">' + 
+								   '	<p class="caption_content">'+ this.caption1 +'</p>' + 
 							   	   '</div>' + '</div> ';
 				positionName='#t'+ num + '.'+ sportCategory+ '.post';
 	    		$(positionName+' h8').after(img1);
 	    	}
-	    	if(this.gsx$link2 != null)
+	    	if(this.link2 != null)
 	    	{
 	    		var numPTags = $('#t' + num + ' p').length / 2;
 	    		var stringNum = num.toString();
-	    		img2 = '<div class="thumbnail with-caption col-sm-12">' + '<img src="' + this.gsx$link2.$t + '" />'+'</div> ';
+	    		img2 = '<div class="thumbnail with-caption col-sm-12">' + '<img src="' + this.link2 + '" />'+'</div> ';
 	    		$(positionName+' p:nth-child(' + numPTags.toString() + ')').after(img2);
 	    	}
 	    }
-
+	    num++;
 	  });
-	  num++;
+	  
 
 	});
 
@@ -115,3 +119,22 @@ $(document).ready(function() {
 });
 
 
+function clean_google_sheet_json(data){
+	var formatted_json = [];
+	var elem = {};
+	var real_keyname = '';
+	$.each(data.feed.entry, function(i, entry) {
+		elem = {};
+		$.each(entry, function(key, value){
+			// fields that were in the spreadsheet start with gsx$
+			if (key.indexOf("gsx$") == 0) 
+			{
+				// get everything after gsx$
+				real_keyname = key.substring(4); 
+				elem[real_keyname] = value['$t'];
+			}
+		});
+		formatted_json.push(elem);
+	});
+	return formatted_json;
+}
