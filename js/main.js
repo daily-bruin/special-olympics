@@ -34,7 +34,7 @@ $(document).ready(function() {
 	var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 	var oldDanceMarathonURL= "https://spreadsheets.google.com/feeds/list/1gJQIn0TvEJ0c-R7Csntfwmu3qwTzqAYJEImdZ720jeQ/od6/public/values?alt=json";
 	
-	var sports = ["gymnastics", "judo", "soccer", "softball", "tennis", "volleyball", "opening"];
+	var sports = ["opening", "gymnastics", "judo", "soccer", "softball", "tennis", "volleyball"];
 
 	// set up nav bar links to reference bottom posts and
 	// make classes for all sport categories in #content
@@ -49,7 +49,7 @@ $(document).ready(function() {
 	  var entry = data.reverse();	// get array of entries
 	  var num = 0;
 	  
-	  console.log(entry);
+	  
 
 	  $(entry).each(function(){
 
@@ -70,31 +70,30 @@ $(document).ready(function() {
 	    {
 	    var img1="";
 	  	var img2="";
-	  	var positionName="";
+	  	var positionName='#t'+ num + '.'+ sportCategory+ '.post';
 	  	var byline="";
 	    	
 			if(this.author)
 			{
 				byline="<h8 class="+'"byline"'+">"+this.author+"</h8>";
-				positionName='#t'+ num + '.'+ sportCategory+ '.post';
 	    		$(positionName+' h2').after(byline);
-	    		console.log(this.author);
 			}
-	    	if(this.link1 != null)
+	    	if(this.link1 != "")
 	    	{
 	    		img1 = '<div class="thumbnail with-caption col-sm-12">' + 
 	    		'<img src="' + this.link1 +'" />'+'<div class="caption">' + 
 								   '	<p class="caption_content">'+ this.caption1 +'</p>' + 
 							   	   '</div>' + '</div> ';
-				positionName='#t'+ num + '.'+ sportCategory+ '.post';
 	    		$(positionName+' h8').after(img1);
 	    	}
-	    	if(this.link2 != null)
+	    	if(this.link2 != "")
 	    	{
 	    		var numPTags = $('#t' + num + ' p').length / 2;
+	    		numPTags = Math.floor(numPTags);
 	    		var stringNum = num.toString();
 	    		img2 = '<div class="thumbnail with-caption col-sm-12">' + '<img src="' + this.link2 + '" />'+'</div> ';
-	    		$(positionName+' p:nth-child(' + numPTags.toString() + ')').after(img2);
+	    		//$(positionName+' p:nth-child(' + numPTags.toString() + ')').after(img2);
+	    		$(positionName+' p').eq(numPTags).after(img2);
 	    	}
 	    }
 	    num++;
