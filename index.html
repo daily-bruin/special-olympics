@@ -16,6 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="js/handlebars.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#scrollspy" id="top">
@@ -23,8 +24,8 @@
   <nav>
       <div class="nav-top row">
         <a class="title large-4 columns" href="http://dailybruin.com">Daily Bruin</a>
-        <a class="nav-topic large-4 columns" id="nav-sport-link" href="index.html">Sports</a>
-        <a class="nav-topic large-4 columns" id="nav-venue-link" href="venues.html">Venue</a>
+        <a class="nav-topic small-6 large-4 columns" id="nav-sport-link" href="#">Sports</a>
+        <a class="nav-topic small-6 large-4 columns" id="nav-venue-link" href="venues.html">On Campus Events</a>
       </div>
       <div class="sport-venue-details">
         <aside id="sportNames">
@@ -51,7 +52,9 @@
   </nav>
   <!--NAV END-->
 
-  <div class="row"><img src="img/landing.jpg" /></div>
+  <div class="row" id="landing-img">World Special Olympics 2015<img src="img/event-map.jpg" style="margin-top: 10px"/></div>
+  <div class="row" id="description">The Special Olympics officially opened Saturday in a ceremony at the Los Angeles Coliseum hosted by none other than Michelle Obama. Over the next two weeks, over 6,000 athletes from 2,000 different countries will compete across a range of competitions, some of which will be taking place here in Westwood. This page will serve all your news needs regarding this summer's Special Olympics as the Daily Bruin reports live from every event.
+  </div>
 
   <div class="container" id="body-content">
     <div class="row">

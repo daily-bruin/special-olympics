@@ -14,6 +14,7 @@ nav {
   text-align: center;
   position: fixed;
   z-index: 100;
+  top: 0;
   .title {
     float: left;
   }
@@ -88,6 +89,22 @@ aside {
   }
 }
 
+#landing-img {
+      z-index: 5;
+      position: relative;
+      margin-top: 100px;
+      margin-bottom: 10px;
+      font-size: 30px;
+      text-align: center;
+}
+
+#description {
+  padding: 20px;
+  text-align: left;
+  background-color: rgba(255,255,255,0.5);
+  width: 100%;
+}
+
 /* FOR VENUE MAP: */
 #map-body {
     #googlemaps {
@@ -97,11 +114,6 @@ aside {
       top: 0;
       left: 0;
       z-index: 0; /* Set z-index to 0 as it will be on a layer below the contact form */
-    }
-
-    #landing-img {
-      z-index: 5;
-      position: relative;
     }
 
     // nav css

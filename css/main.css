@@ -14,32 +14,33 @@ nav {
   text-align: center;
   position: fixed;
   z-index: 100;
+  top: 0;
 }
-/* line 17, ../scss/main.scss */
+/* line 18, ../scss/main.scss */
 nav .title {
   float: left;
 }
-/* line 20, ../scss/main.scss */
+/* line 21, ../scss/main.scss */
 nav .nav-top {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/* line 23, ../scss/main.scss */
+/* line 24, ../scss/main.scss */
 nav .nav-top a {
   padding-bottom: 5px;
 }
-/* line 27, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 nav a {
   color: white;
 }
-/* line 29, ../scss/main.scss */
+/* line 30, ../scss/main.scss */
 nav a:hover {
   color: lightblue;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 aside {
   line-height: 50px;
   z-index: 10;
@@ -47,62 +48,80 @@ aside {
   width: 100%;
   text-align: center;
 }
-/* line 43, ../scss/main.scss */
+/* line 44, ../scss/main.scss */
 aside li {
   list-style-type: none;
 }
-/* line 47, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 aside a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 54, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 .post {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5px 20px 5px 20px;
   margin-bottom: 20px;
 }
 
-/* line 61, ../scss/main.scss */
+/* line 62, ../scss/main.scss */
 #content .post {
   border-top: 5px solid;
 }
-/* line 63, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 #content .post img {
   margin: 0px 0 0px 0;
   width: 100%;
 }
-/* line 68, ../scss/main.scss */
+/* line 69, ../scss/main.scss */
 #content .gymnastics {
   border-color: tomato;
 }
-/* line 71, ../scss/main.scss */
+/* line 72, ../scss/main.scss */
 #content .judo {
   border-color: purple;
 }
-/* line 74, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 #content .soccer {
   border-color: green;
 }
-/* line 77, ../scss/main.scss */
+/* line 78, ../scss/main.scss */
 #content .softball {
   border-color: lightblue;
 }
-/* line 80, ../scss/main.scss */
+/* line 81, ../scss/main.scss */
 #content .tennis {
   border-color: darkseagreen;
 }
-/* line 83, ../scss/main.scss */
+/* line 84, ../scss/main.scss */
 #content .volleyball {
   border-color: goldenrod;
 }
-/* line 86, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 #content .opening {
   border-color: darkred;
 }
 
+/* line 92, ../scss/main.scss */
+#landing-img {
+  z-index: 5;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* line 101, ../scss/main.scss */
+#description {
+  padding: 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+
 /* FOR VENUE MAP: */
-/* line 93, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 #map-body #googlemaps {
   height: 100%;
   width: 100%;
@@ -112,12 +131,7 @@ aside a:hover {
   z-index: 0;
   /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-/* line 102, ../scss/main.scss */
-#map-body #landing-img {
-  z-index: 5;
-  position: relative;
-}
-/* line 108, ../scss/main.scss */
+/* line 120, ../scss/main.scss */
 #map-body nav {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -126,44 +140,44 @@ aside a:hover {
   z-index: 100;
   top: 0;
 }
-/* line 115, ../scss/main.scss */
+/* line 127, ../scss/main.scss */
 #map-body nav .title {
   float: left;
 }
-/* line 118, ../scss/main.scss */
+/* line 130, ../scss/main.scss */
 #map-body nav .nav-top {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/* line 121, ../scss/main.scss */
+/* line 133, ../scss/main.scss */
 #map-body nav .nav-top a {
   padding-bottom: 5px;
 }
-/* line 125, ../scss/main.scss */
+/* line 137, ../scss/main.scss */
 #map-body nav a {
   color: white;
 }
-/* line 127, ../scss/main.scss */
+/* line 139, ../scss/main.scss */
 #map-body nav a:hover {
   color: lightblue;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 135, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 #map-body aside {
   line-height: 50px;
   width: 100%;
   text-align: center;
 }
-/* line 139, ../scss/main.scss */
+/* line 151, ../scss/main.scss */
 #map-body aside li {
   list-style-type: none;
 }
-/* line 143, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
 #map-body aside a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 151, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 #map-body #dblogo {
   position: fixed;
   left: 0;
@@ -171,7 +185,7 @@ aside a:hover {
   padding: 5px;
   height: 50px;
 }
-/* line 159, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 #map-body #social-buttons {
   position: fixed;
   right: 10px;
@@ -180,25 +194,25 @@ aside a:hover {
   height: 40px;
   top: -12px;
 }
-/* line 168, ../scss/main.scss */
+/* line 180, ../scss/main.scss */
 #map-body ul.share-buttons {
   list-style: none;
   padding: 0;
 }
-/* line 173, ../scss/main.scss */
+/* line 185, ../scss/main.scss */
 #map-body ul.share-buttons li {
   display: inline;
 }
-/* line 177, ../scss/main.scss */
+/* line 189, ../scss/main.scss */
 #map-body #content {
   margin-top: 90px;
   padding-left: 20px;
 }
-/* line 182, ../scss/main.scss */
+/* line 194, ../scss/main.scss */
 #map-body #content-credit {
   padding-left: 20px;
 }
-/* line 186, ../scss/main.scss */
+/* line 198, ../scss/main.scss */
 #map-body .card {
   position: relative;
   margin-bottom: 20px;
@@ -209,11 +223,11 @@ aside a:hover {
   background: white;
   pointer-events: auto;
 }
-/* line 197, ../scss/main.scss */
+/* line 209, ../scss/main.scss */
 #map-body #intro-card {
   border-top: 6pt solid #0188d2;
 }
-/* line 201, ../scss/main.scss */
+/* line 213, ../scss/main.scss */
 #map-body .card-title {
   font-family: Roboto;
   font-size: 20pt;
@@ -221,14 +235,14 @@ aside a:hover {
   margin: 5px;
   margin-bottom: 15px;
 }
-/* line 209, ../scss/main.scss */
+/* line 221, ../scss/main.scss */
 #map-body .card-location {
   font-family: Roboto;
   font-size: 14pt;
   font-weight: bold;
   margin: 5px;
 }
-/* line 216, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 #map-body .card-video {
   position: relative;
   margin-left: -15px;
@@ -237,7 +251,7 @@ aside a:hover {
   height: 0;
   padding-bottom: 60%;
 }
-/* line 224, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 #map-body .card-video-embed {
   position: absolute;
   top: 0;
@@ -245,7 +259,7 @@ aside a:hover {
   width: 100%;
   height: 100%;
 }
-/* line 232, ../scss/main.scss */
+/* line 244, ../scss/main.scss */
 #map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -254,14 +268,14 @@ aside a:hover {
   margin-top: 15px;
   text-align: justify;
 }
-/* line 241, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 #map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-/* line 248, ../scss/main.scss */
+/* line 260, ../scss/main.scss */
 #map-body #conclusion {
   font-family: Roboto;
   text-align: center;
@@ -270,35 +284,35 @@ aside a:hover {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 257, ../scss/main.scss */
+  /* line 269, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 262, ../scss/main.scss */
+  /* line 274, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 266, ../scss/main.scss */
+  /* line 278, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 269, ../scss/main.scss */
+  /* line 281, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 272, ../scss/main.scss */
+  /* line 284, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 275, ../scss/main.scss */
+  /* line 287, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -310,7 +324,7 @@ aside a:hover {
     background: white;
   }
 
-  /* line 286, ../scss/main.scss */
+  /* line 298, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -319,7 +333,7 @@ aside a:hover {
     height: 80px;
   }
 
-  /* line 294, ../scss/main.scss */
+  /* line 306, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -329,25 +343,25 @@ aside a:hover {
     top: -12px;
   }
 }
-/* line 304, ../scss/main.scss */
+/* line 316, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
 }
 
-/* line 309, ../scss/main.scss */
+/* line 321, ../scss/main.scss */
 p.caption_content {
   margin: 0;
   float: right;
   font-size: 12px;
 }
 
-/* line 315, ../scss/main.scss */
+/* line 327, ../scss/main.scss */
 .byline {
   color: #6B6B6B;
 }
 
-/* line 318, ../scss/main.scss */
+/* line 330, ../scss/main.scss */
 h2 {
   font-family: 'Raleway', sans-serif;
 }

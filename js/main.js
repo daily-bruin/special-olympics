@@ -6,6 +6,10 @@ $(document).ready(function() {
 	$('aside').hide();
 	$( 'nav' ).hover(
 	  function() {
+	  	$('nav').click(function() {
+	  		console.log("slide up");
+			$('#sportNames').slideUp();
+		});
 	    $( '#nav-sport-link' ).hover(
 	      function() {
 	      	$('#venueNames').slideUp();
@@ -23,6 +27,7 @@ $(document).ready(function() {
 	    $('#venueNames').slideUp();
 	  }
 	);
+
 	// GOOGLE SPREADSHEET JS
 	//source file is https://docs.google.com/a/media.ucla.edu/spreadsheets/d/1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I/edit?usp=sharing
 	var spreadsheetID = "1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I";
@@ -48,6 +53,7 @@ $(document).ready(function() {
 	  	var sportCategory = this.gsx$sportcategory.$t;
 	  	var newPost = '<div class="' + sportCategory + ' post" id="t' + num + '"><h2>' + this.gsx$title.$t + '</h2><p>' 
 	  					+ this.gsx$content.$t + '</p></div>';
+
 	    $('#' + sportCategory + 'group').append(newPost);
 
 	    if(this.gsx$type.$t === "article")
@@ -63,7 +69,7 @@ $(document).ready(function() {
 								   '	<p class="caption_content">'+ entry.gsx$caption.$t +'</p>' + 
 							   	   '</div>' + 
 								   '</div> <br />'*/
-			if(this.gsx$author != null)
+			if(this.gsx$author)
 			{
 				byline="<h8 class="+'"byline"'+">"+this.gsx$author.$t+"</h8>";
 				positionName='#t'+ num + '.'+ sportCategory+ '.post';

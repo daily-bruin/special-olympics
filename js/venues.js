@@ -6,14 +6,20 @@ $(document).ready(function() {
 	$('aside').hide();
 	$( 'nav' ).hover(
 	  function() {
+  	  	$('nav').click(function() {
+  	  		console.log("slide up");
+  			$('#venueNames').slideUp();
+  		});
 	    $( '#nav-sport-link' ).hover(
-	      function() {
+	    function() {
 	      	$('#venueNames').slideUp();
-	        $('#sportNames').slideDown();
 	      }
 	    );
 	    $( '#nav-venue-link' ).hover(
 	      function() {
+      	  	$('#venueNames').click(function() {
+      			$('#venueNames').slideUp();
+      		});
 	      	$('#sportNames').slideUp();
 	        $('#venueNames').slideDown();
 	      }
