@@ -116,12 +116,13 @@ aside a:hover {
 #description {
   padding: 20px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
+  font-size: 18px;
 }
 
 /* FOR VENUE MAP: */
-/* line 110, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 #map-body #googlemaps {
   height: 100%;
   width: 100%;
@@ -131,7 +132,7 @@ aside a:hover {
   z-index: 0;
   /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-/* line 120, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 #map-body nav {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -140,44 +141,44 @@ aside a:hover {
   z-index: 100;
   top: 0;
 }
-/* line 127, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 #map-body nav .title {
   float: left;
 }
-/* line 130, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 #map-body nav .nav-top {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/* line 133, ../scss/main.scss */
+/* line 134, ../scss/main.scss */
 #map-body nav .nav-top a {
   padding-bottom: 5px;
 }
-/* line 137, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 #map-body nav a {
   color: white;
 }
-/* line 139, ../scss/main.scss */
+/* line 140, ../scss/main.scss */
 #map-body nav a:hover {
   color: lightblue;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 147, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 #map-body aside {
   line-height: 50px;
   width: 100%;
   text-align: center;
 }
-/* line 151, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 #map-body aside li {
   list-style-type: none;
 }
-/* line 155, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 #map-body aside a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 163, ../scss/main.scss */
+/* line 164, ../scss/main.scss */
 #map-body #dblogo {
   position: fixed;
   left: 0;
@@ -185,7 +186,7 @@ aside a:hover {
   padding: 5px;
   height: 50px;
 }
-/* line 171, ../scss/main.scss */
+/* line 172, ../scss/main.scss */
 #map-body #social-buttons {
   position: fixed;
   right: 10px;
@@ -194,25 +195,25 @@ aside a:hover {
   height: 40px;
   top: -12px;
 }
-/* line 180, ../scss/main.scss */
+/* line 181, ../scss/main.scss */
 #map-body ul.share-buttons {
   list-style: none;
   padding: 0;
 }
-/* line 185, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 #map-body ul.share-buttons li {
   display: inline;
 }
-/* line 189, ../scss/main.scss */
+/* line 190, ../scss/main.scss */
 #map-body #content {
   margin-top: 90px;
   padding-left: 20px;
 }
-/* line 194, ../scss/main.scss */
+/* line 195, ../scss/main.scss */
 #map-body #content-credit {
   padding-left: 20px;
 }
-/* line 198, ../scss/main.scss */
+/* line 199, ../scss/main.scss */
 #map-body .card {
   position: relative;
   margin-bottom: 20px;
@@ -223,11 +224,11 @@ aside a:hover {
   background: white;
   pointer-events: auto;
 }
-/* line 209, ../scss/main.scss */
+/* line 210, ../scss/main.scss */
 #map-body #intro-card {
   border-top: 6pt solid #0188d2;
 }
-/* line 213, ../scss/main.scss */
+/* line 214, ../scss/main.scss */
 #map-body .card-title {
   font-family: Roboto;
   font-size: 20pt;
@@ -235,14 +236,14 @@ aside a:hover {
   margin: 5px;
   margin-bottom: 15px;
 }
-/* line 221, ../scss/main.scss */
+/* line 222, ../scss/main.scss */
 #map-body .card-location {
   font-family: Roboto;
   font-size: 14pt;
   font-weight: bold;
   margin: 5px;
 }
-/* line 228, ../scss/main.scss */
+/* line 229, ../scss/main.scss */
 #map-body .card-video {
   position: relative;
   margin-left: -15px;
@@ -251,7 +252,7 @@ aside a:hover {
   height: 0;
   padding-bottom: 60%;
 }
-/* line 236, ../scss/main.scss */
+/* line 237, ../scss/main.scss */
 #map-body .card-video-embed {
   position: absolute;
   top: 0;
@@ -259,7 +260,7 @@ aside a:hover {
   width: 100%;
   height: 100%;
 }
-/* line 244, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 #map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -268,14 +269,14 @@ aside a:hover {
   margin-top: 15px;
   text-align: justify;
 }
-/* line 253, ../scss/main.scss */
+/* line 254, ../scss/main.scss */
 #map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-/* line 260, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 #map-body #conclusion {
   font-family: Roboto;
   text-align: center;
@@ -284,35 +285,35 @@ aside a:hover {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 269, ../scss/main.scss */
+  /* line 270, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 274, ../scss/main.scss */
+  /* line 275, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 278, ../scss/main.scss */
+  /* line 279, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 281, ../scss/main.scss */
+  /* line 282, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 284, ../scss/main.scss */
+  /* line 285, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 287, ../scss/main.scss */
+  /* line 288, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -324,7 +325,7 @@ aside a:hover {
     background: white;
   }
 
-  /* line 298, ../scss/main.scss */
+  /* line 299, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -333,7 +334,7 @@ aside a:hover {
     height: 80px;
   }
 
-  /* line 306, ../scss/main.scss */
+  /* line 307, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -343,25 +344,25 @@ aside a:hover {
     top: -12px;
   }
 }
-/* line 316, ../scss/main.scss */
+/* line 317, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
 }
 
-/* line 321, ../scss/main.scss */
+/* line 322, ../scss/main.scss */
 p.caption_content {
   margin: 0;
   float: right;
   font-size: 12px;
 }
 
-/* line 327, ../scss/main.scss */
+/* line 328, ../scss/main.scss */
 .byline {
   color: #6B6B6B;
 }
 
-/* line 330, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 h2 {
   font-family: 'Raleway', sans-serif;
 }
