@@ -4,29 +4,13 @@ $(document).ready(function() {
 	$('#content').css('margin-top', originalContentHeight);
 	// NAV JS
 	$('aside').hide();
-	$( 'nav' ).hover(
-	  function() {
-	  	$('nav').click(function() {
-	  		console.log("slide up");
-			$('#sportNames').slideUp();
-		});
-	    $( '#nav-sport-link' ).hover(
-	      function() {
-	      	$('#venueNames').slideUp();
-	        $('#sportNames').slideDown();
-	      }
-	    );
-	    /*$( '#nav-venue-link' ).hover(
-	      function() {
-	      	$('#sportNames').slideUp();
-	        $('#venueNames').slideDown();
-	      }
-	    );*/
-	  }, function() {
-	    $('#sportNames').slideUp();
-	    $('#venueNames').slideUp();
-	  }
-	);
+	$('#nav-sport-link').on('click', function () {
+	        if ($('#sportNames').is(':visible')) {
+	            $('#sportNames').slideUp();
+	        } else {
+	            $('#sportNames').slideDown();
+	        };
+	    });
 
 	// GOOGLE SPREADSHEET JS
 	//source file is https://docs.google.com/a/media.ucla.edu/spreadsheets/d/1c5UOYAG9b-e9rJ8CXAgXmmeAxpu0gD9-t2sFZe0fx3I/edit?usp=sharing
@@ -110,7 +94,7 @@ $(document).ready(function() {
 	    var $target = $(target);
 
 	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top - originalContentHeight - 90
+	        'scrollTop': $target.offset()/*.top*/ - originalContentHeight - 90
 	    }, 1000, 'swing', function () {
 	        window.location.hash = target;
 	    });

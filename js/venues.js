@@ -4,31 +4,13 @@ $(document).ready(function() {
 	$('#content').css('margin-top', originalContentHeight);
 	// NAV JS
 	$('aside').hide();
-	$( 'nav' ).hover(
-	  function() {
-  	  	$('nav').click(function() {
-  	  		console.log("slide up");
-  			$('#venueNames').slideUp();
-  		});
-	    $( '#nav-sport-link' ).hover(
-	    function() {
-	      	$('#venueNames').slideUp();
-	      }
-	    );
-	    $( '#nav-venue-link' ).hover(
-	      function() {
-      	  	$('#venueNames').click(function() {
-      			$('#venueNames').slideUp();
-      		});
-	      	$('#sportNames').slideUp();
-	        $('#venueNames').slideDown();
-	      }
-	    );
-	  }, function() {
-	    $('#sportNames').slideUp();
-	    $('#venueNames').slideUp();
-	  }
-	);
+	$('#nav-venue-link').on('click', function () {
+	        if ($('#venueNames').is(':visible')) {
+	            $('#venueNames').slideUp();
+	        } else {
+	            $('#venueNames').slideDown();
+	        };
+	    });
 
 	// scrolling speed
 	$('a[href^="#"]').on('click',function (e) {
