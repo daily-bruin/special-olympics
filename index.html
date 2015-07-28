@@ -4,65 +4,79 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
 <head>
-    <title>2015 Special Olympics</title>
+    <title>Special Olympics World Games 2015</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="2015 Special Olympics" />
+    <meta property="og:title" content="Special Olympics World Games 2015" />
     <meta property="og:image" content="http://dailybruin.com/images/2015/07/landing.jpg" />
     <link rel="shortcut icon" href="http://dailybruin.com/img/favicons/favicon-32x32.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="js/handlebars.js"></script>
 </head>
 
-<body data-spy="scroll" data-target="#scrollspy" id="top">
-  <!--NAV START-->
-  <nav>
-      <div class="nav-top row">
-        <a class="title large-4 columns" href="http://dailybruin.com">
-          <img src="http://dailybruin.com/img/db_logo.svg"/>
-        </a>
-        <a class="nav-topic small-6 large-4 columns" id="nav-sport-link" href="#">Sports</a>
-        <a class="nav-topic small-6 large-4 columns" id="nav-venue-link" href="venues.html">On Campus Events</a>
-      </div>
-      <div class="sport-venue-details">
-        <aside id="sportNames">
-          <a class="medium-4 large-2 columns" href="#gymnasticsgroup">Gymnastics</a>
-          <a class="medium-4 large-2 columns" href="#judogroup">Judo</a>
-          <a class="medium-4 large-2 columns" href="#soccergroup">Soccer</a>
-          <a class="medium-4 large-2 columns" href="#softballgroup">Softball</a>
-          <a class="medium-4 large-2 columns" href="#tennisgroup">Tennis</a>
-          <a class="medium-4 large-2 columns" href="#volleyballgroup">Volleyball</a>
-        </aside>
-        <!--
-        <aside id="venueNames">
-          <a class="medium-4 large-4 columns">Drake Stadium</a>
-          <a class="medium-4 large-4 columns">Easton Stadium</a>
-          <a class="medium-4 large-4 columns">IM Field</a>
-          <a class="medium-4 large-4 columns">John Wooden Center</a>
-          <a class="medium-4 large-4 columns">North Athletic Field</a>
-          <a class="medium-4 large-4 columns">Student Activities Center</a>
-          <a class="medium-4 large-4 columns">Pauley Pavilion</a>
-          <a class="medium-4 large-4 columns">Los Angeles Tennis Center</a>
-          <a class="medium-4 large-4 columns">The Hill – Athletes’ Village</a>
-        </aside>-->
-      </div>
-  </nav>
-  <!--NAV END-->
 
-  <div class="row" id="landing-img">
-    <h1 class="title">Special Olympics World Games: Los Angeles 2015</h1>
-    <img src="img/event-map.jpg" style="margin-top: 10px"/></div>
-  <div class="row" id="description">The Special Olympics officially opened Saturday in a ceremony at the Los Angeles Coliseum hosted by none other than Michelle Obama. Over the next two weeks, over 6,000 athletes from 2,000 different countries will compete across a range of competitions, some of which will be taking place here in Westwood. This page will serve all your news needs regarding this summer's Special Olympics as the Daily Bruin reports live from every event.
+
+<body id="top">
+
+<!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://dailybruin.com">
+          Daily Bruin
+          <!-- <img class="img-responsive" src="http://dailybruin.com/img/db_logo.svg"/> -->
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sports<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#gymnasticsgroup">Gymnastics</a></li>
+              <li><a href="#judogroup">Judo</a></li>
+              <li><a href="#soccergroup">Soccer</a></li>
+              <li><a href="#softballgroup">Softball</a></li>
+              <li><a href="#tennisgroup">Tennis</a></li>
+              <li><a href="#volleyballgroup">Volleyball</a></li>
+            </ul>
+          </li>
+          <li><a href="venues.html">On-Campus Venues</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container" id="landing-img" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="title">Special Olympics World Games: Los Angeles 2015</h1>
+        <img class="img-responsive" src="img/michelleobama.jpg"/>
+
+        <div class="row">
+      <div class="col-sm-7 col-sm-offset-1" id="description">
+        The Special Olympics officially opened Saturday in a ceremony at the Los Angeles Coliseum hosted by none other than Michelle Obama. Over the next two weeks, over 6,000 athletes from 2,000 different countries will compete across a range of competitions, some of which will be taking place here in Westwood. This page will serve all your news needs regarding this summer's Special Olympics as the Daily Bruin reports live from every event. (Daniel Alcazar/Daily Bruin Senior Staff)
+      </div>
+    </div>
+
+
+      </div>
+    </div>
+
   </div>
+
 
   <div class="container" id="body-content">
     <div class="row">
-      <div class="medium-12 columns" id="content">
+      <div class="col-md-8 col-md-offset-2" id="content">
 
       </div>
     </div>
@@ -74,8 +88,7 @@
   </footer>   
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="js/vendor/moment.min.js"></script>
-  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
 
   <!--<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

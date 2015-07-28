@@ -6,41 +6,15 @@ h1.title {
   font-size: 2.5rem;
 }
 
-
-
 body {
-  background-image: url('../img/weave_bw.png');
-   line-height: 1.5;
+  background-color: #eeeeee;
+  line-height: 1.7;
   font-family: 'Raleway', sans-serif;
+  p {
+    margin-bottom: 20px;
+  }
 }
 
-nav {
-  background-color: rgba(0,0,0,0.7);
-  width: 100%;
-  padding: 20px 0 15px 0;
-  text-align: center;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  .title {
-    float: left;
-  }
-  .nav-top {
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    a {
-      padding-bottom: 5px;
-    }
-  }
-  a {
-    color: white;
-    &:hover {
-      color: lightblue;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  }
-}
 
 aside {
   line-height: $nav-link-height;
@@ -62,7 +36,7 @@ aside {
 .post {
   background-color: rgba(255,255,255,0.8);
   padding: 5px 20px 5px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 #content {
@@ -97,20 +71,27 @@ aside {
 }
 
 #landing-img {
-      z-index: 5;
-      position: relative;
-      margin-top: 100px;
-      margin-bottom: 10px;
-      font-size: 30px;
-      text-align: center;
+  z-index: 5;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 #description {
-  padding: 20px;
   text-align: left;
-  background-color: rgba(255,255,255,0.7);
-  width: 100%;
-  font-size: 18px;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  position: absolute;
+  top: 300px;
+  left: 0px;
+}
+
+#description:hover {
+  background-color: rgba(0,0,0,1);
 }
 
 /* FOR VENUE MAP: */

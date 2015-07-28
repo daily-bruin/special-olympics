@@ -32,23 +32,23 @@ $(document).ready(function() {
 		$('#content').append('<div id="' + sports[i] + 'group"></div>');
 	};
 	
-	// auto hide/show navbar
-	var mywindow = $(window);
-	var mypos = mywindow.scrollTop();
-	var up = false;
-	var newscroll;
-	mywindow.scroll(function () {
-	    newscroll = mywindow.scrollTop();
-	    if (newscroll > mypos && !up) {
-	        $('nav').stop().slideToggle();
-	        up = !up;
-	        console.log(up);
-	    } else if(newscroll < mypos && up) {
-	        $('nav').stop().slideToggle();
-	        up = !up;
-	    }
-	    mypos = newscroll;
-	});
+	// // auto hide/show navbar
+	// var mywindow = $(window);
+	// var mypos = mywindow.scrollTop();
+	// var up = false;
+	// var newscroll;
+	// mywindow.scroll(function () {
+	//     newscroll = mywindow.scrollTop();
+	//     if (newscroll > mypos && !up) {
+	//         $('nav').stop().slideToggle();
+	//         up = !up;
+	//         console.log(up);
+	//     } else if(newscroll < mypos && up) {
+	//         $('nav').stop().slideToggle();
+	//         up = !up;
+	//     }
+	//     mypos = newscroll;
+	// });
 	
 	// get spreadsheet JSON
 	$.getJSON(url, function(data) {
