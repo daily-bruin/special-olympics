@@ -1,12 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 /* line 4, ../scss/main.scss */
+h1.title {
+  font-family: Raleway;
+  font-size: 2.5rem;
+}
+
+/* line 11, ../scss/main.scss */
 body {
   background-image: url("../img/weave_bw.png");
   line-height: 1.5;
   font-family: 'Raleway', sans-serif;
 }
 
-/* line 10, ../scss/main.scss */
+/* line 17, ../scss/main.scss */
 nav {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -16,31 +22,31 @@ nav {
   z-index: 100;
   top: 0;
 }
-/* line 18, ../scss/main.scss */
+/* line 25, ../scss/main.scss */
 nav .title {
   float: left;
 }
-/* line 21, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 nav .nav-top {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/* line 24, ../scss/main.scss */
+/* line 31, ../scss/main.scss */
 nav .nav-top a {
   padding-bottom: 5px;
 }
-/* line 28, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 nav a {
   color: white;
 }
-/* line 30, ../scss/main.scss */
+/* line 37, ../scss/main.scss */
 nav a:hover {
   color: lightblue;
   text-decoration: none;
   cursor: pointer;
 }
 
-/* line 38, ../scss/main.scss */
+/* line 45, ../scss/main.scss */
 aside {
   line-height: 50px;
   z-index: 10;
@@ -48,61 +54,61 @@ aside {
   width: 100%;
   text-align: center;
 }
-/* line 44, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 aside li {
   list-style-type: none;
 }
-/* line 48, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 aside a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 55, ../scss/main.scss */
+/* line 62, ../scss/main.scss */
 .post {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5px 20px 5px 20px;
   margin-bottom: 20px;
 }
 
-/* line 62, ../scss/main.scss */
+/* line 69, ../scss/main.scss */
 #content .post {
   border-top: 5px solid;
 }
-/* line 64, ../scss/main.scss */
+/* line 71, ../scss/main.scss */
 #content .post img {
   margin: 0px 0 0px 0;
   width: 100%;
 }
-/* line 69, ../scss/main.scss */
+/* line 76, ../scss/main.scss */
 #content .gymnastics {
   border-color: tomato;
 }
-/* line 72, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 #content .judo {
   border-color: purple;
 }
-/* line 75, ../scss/main.scss */
+/* line 82, ../scss/main.scss */
 #content .soccer {
   border-color: green;
 }
-/* line 78, ../scss/main.scss */
+/* line 85, ../scss/main.scss */
 #content .softball {
   border-color: lightblue;
 }
-/* line 81, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 #content .tennis {
   border-color: darkseagreen;
 }
-/* line 84, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 #content .volleyball {
   border-color: goldenrod;
 }
-/* line 87, ../scss/main.scss */
+/* line 94, ../scss/main.scss */
 #content .opening {
   border-color: darkred;
 }
 
-/* line 92, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 #landing-img {
   z-index: 5;
   position: relative;
@@ -112,7 +118,7 @@ aside a:hover {
   text-align: center;
 }
 
-/* line 101, ../scss/main.scss */
+/* line 108, ../scss/main.scss */
 #description {
   padding: 20px;
   text-align: left;
@@ -122,7 +128,7 @@ aside a:hover {
 }
 
 /* FOR VENUE MAP: */
-/* line 111, ../scss/main.scss */
+/* line 118, ../scss/main.scss */
 #map-body #googlemaps {
   height: 100%;
   width: 100%;
@@ -132,7 +138,7 @@ aside a:hover {
   z-index: 0;
   /* Set z-index to 0 as it will be on a layer below the contact form */
 }
-/* line 121, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 #map-body nav {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -141,44 +147,44 @@ aside a:hover {
   z-index: 100;
   top: 0;
 }
-/* line 128, ../scss/main.scss */
+/* line 135, ../scss/main.scss */
 #map-body nav .title {
   float: left;
 }
-/* line 131, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 #map-body nav .nav-top {
   font-size: 1.3em;
   margin-bottom: 10px;
 }
-/* line 134, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 #map-body nav .nav-top a {
   padding-bottom: 5px;
 }
-/* line 138, ../scss/main.scss */
+/* line 145, ../scss/main.scss */
 #map-body nav a {
   color: white;
 }
-/* line 140, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 #map-body nav a:hover {
   color: lightblue;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 148, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
 #map-body aside {
   line-height: 50px;
   width: 100%;
   text-align: center;
 }
-/* line 152, ../scss/main.scss */
+/* line 159, ../scss/main.scss */
 #map-body aside li {
   list-style-type: none;
 }
-/* line 156, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 #map-body aside a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 164, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 #map-body #dblogo {
   position: fixed;
   left: 0;
@@ -186,7 +192,7 @@ aside a:hover {
   padding: 5px;
   height: 50px;
 }
-/* line 172, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 #map-body #social-buttons {
   position: fixed;
   right: 10px;
@@ -195,25 +201,25 @@ aside a:hover {
   height: 40px;
   top: -12px;
 }
-/* line 181, ../scss/main.scss */
+/* line 188, ../scss/main.scss */
 #map-body ul.share-buttons {
   list-style: none;
   padding: 0;
 }
-/* line 186, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 #map-body ul.share-buttons li {
   display: inline;
 }
-/* line 190, ../scss/main.scss */
+/* line 197, ../scss/main.scss */
 #map-body #content {
   margin-top: 90px;
   padding-left: 20px;
 }
-/* line 195, ../scss/main.scss */
+/* line 202, ../scss/main.scss */
 #map-body #content-credit {
   padding-left: 20px;
 }
-/* line 199, ../scss/main.scss */
+/* line 206, ../scss/main.scss */
 #map-body .card {
   position: relative;
   margin-bottom: 20px;
@@ -224,11 +230,11 @@ aside a:hover {
   background: white;
   pointer-events: auto;
 }
-/* line 210, ../scss/main.scss */
+/* line 217, ../scss/main.scss */
 #map-body #intro-card {
   border-top: 6pt solid #0188d2;
 }
-/* line 214, ../scss/main.scss */
+/* line 221, ../scss/main.scss */
 #map-body .card-title {
   font-family: Roboto;
   font-size: 20pt;
@@ -236,14 +242,14 @@ aside a:hover {
   margin: 5px;
   margin-bottom: 15px;
 }
-/* line 222, ../scss/main.scss */
+/* line 229, ../scss/main.scss */
 #map-body .card-location {
   font-family: Roboto;
   font-size: 14pt;
   font-weight: bold;
   margin: 5px;
 }
-/* line 229, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 #map-body .card-video {
   position: relative;
   margin-left: -15px;
@@ -252,7 +258,7 @@ aside a:hover {
   height: 0;
   padding-bottom: 60%;
 }
-/* line 237, ../scss/main.scss */
+/* line 244, ../scss/main.scss */
 #map-body .card-video-embed {
   position: absolute;
   top: 0;
@@ -260,7 +266,7 @@ aside a:hover {
   width: 100%;
   height: 100%;
 }
-/* line 245, ../scss/main.scss */
+/* line 252, ../scss/main.scss */
 #map-body .card-description {
   font-family: Roboto;
   font-size: 12pt;
@@ -269,14 +275,14 @@ aside a:hover {
   margin-top: 15px;
   text-align: justify;
 }
-/* line 254, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 #map-body #intro {
   font-family: Roboto;
   text-align: center;
   font-weight: none;
   font-size: 15pt;
 }
-/* line 261, ../scss/main.scss */
+/* line 268, ../scss/main.scss */
 #map-body #conclusion {
   font-family: Roboto;
   text-align: center;
@@ -285,35 +291,35 @@ aside a:hover {
 
 /*  Mobile style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 270, ../scss/main.scss */
+  /* line 277, ../scss/main.scss */
   #googlemaps {
     z-index: 2;
     height: 33%;
     border-bottom: 6pt solid #0188d2;
   }
 
-  /* line 275, ../scss/main.scss */
+  /* line 282, ../scss/main.scss */
   #content {
     margin: 0px;
     margin-top: 60%;
   }
 
-  /* line 279, ../scss/main.scss */
+  /* line 286, ../scss/main.scss */
   .card {
     width: 95%;
   }
 
-  /* line 282, ../scss/main.scss */
+  /* line 289, ../scss/main.scss */
   #intro {
     font-size: 2em;
   }
 
-  /* line 285, ../scss/main.scss */
+  /* line 292, ../scss/main.scss */
   .card-description {
     font-size: 12pt;
   }
 
-  /* line 288, ../scss/main.scss */
+  /* line 295, ../scss/main.scss */
   #nav {
     text-align: center;
     position: fixed;
@@ -325,7 +331,7 @@ aside a:hover {
     background: white;
   }
 
-  /* line 299, ../scss/main.scss */
+  /* line 306, ../scss/main.scss */
   #dblogo {
     position: fixed;
     left: 0;
@@ -334,7 +340,7 @@ aside a:hover {
     height: 80px;
   }
 
-  /* line 307, ../scss/main.scss */
+  /* line 314, ../scss/main.scss */
   #social-buttons {
     position: fixed;
     right: 10px;
@@ -344,25 +350,25 @@ aside a:hover {
     top: -12px;
   }
 }
-/* line 317, ../scss/main.scss */
+/* line 324, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #3381B5;
 }
 
-/* line 322, ../scss/main.scss */
+/* line 329, ../scss/main.scss */
 p.caption_content {
   margin: 0;
   float: right;
   font-size: 12px;
 }
 
-/* line 328, ../scss/main.scss */
+/* line 335, ../scss/main.scss */
 .byline {
   color: #6B6B6B;
 }
 
-/* line 331, ../scss/main.scss */
+/* line 338, ../scss/main.scss */
 h2 {
   font-family: 'Raleway', sans-serif;
 }

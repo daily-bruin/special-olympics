@@ -1,3 +1,4 @@
+/// <reference path="../typings/jquery/jquery.d.ts"/>
 $(document).ready(function() {
 	$('aside').hide();
 
@@ -30,7 +31,25 @@ $(document).ready(function() {
 	for (var i = 0; i < sports.length; i++) {
 		$('#content').append('<div id="' + sports[i] + 'group"></div>');
 	};
-
+	
+	// auto hide/show navbar
+	var mywindow = $(window);
+	var mypos = mywindow.scrollTop();
+	var up = false;
+	var newscroll;
+	mywindow.scroll(function () {
+	    newscroll = mywindow.scrollTop();
+	    if (newscroll > mypos && !up) {
+	        $('nav').stop().slideToggle();
+	        up = !up;
+	        console.log(up);
+	    } else if(newscroll < mypos && up) {
+	        $('nav').stop().slideToggle();
+	        up = !up;
+	    }
+	    mypos = newscroll;
+	});
+	
 	// get spreadsheet JSON
 	$.getJSON(url, function(data) {
 
